@@ -92,12 +92,14 @@ const PaymentPage = () => {
                         const { data } = await axios.post('/api/payment/verify', verificationData, config);
                         console.log("Payment Verified:", data);
 
-                        alert(data.message || 'Booking Confirmed!'); 
+                        // Removed alert() because it is getting blocked by browsers inside async callbacks
+                        // and preventing the user from navigating.
                         navigate('/my-bookings');
 
                     } catch (error) {
                         console.error("Verification Error:", error);
-                        alert(error.response?.data?.message || 'Payment verified, but booking failed.'); 
+                        // If verification fails, show error on screen instead of browser alert
+                        setErrorMsg(error.response?.data?.message || 'Payment verified, but booking failed.');
                     }
                 },
                 prefill: {
