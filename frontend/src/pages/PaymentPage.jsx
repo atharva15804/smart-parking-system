@@ -75,7 +75,15 @@ const PaymentPage = () => {
                         };
 
                         // 4. Verify Payment and Save Booking in Backend
-                        await axios.post('/api/payment/verify', verificationData, config);
+                        const verifyResponse = await axios.post('/api/payment/verify', verificationData, config);
+
+                        // 4.5 Trigger the Vercel Serverless Email Function explicitly on the frontend host
+                        try {
+                            axios.post(window.location.origin + '/api/sendTicket', {
+                                user: userInfo,
+                                booking: verifyResponse.data.booking
+                            }).catch(err => console.error("Silent serverless email error:", err));
+                        } catch (e) { }
 
                         // 5. Navigate straight to bookings on success
                         navigate('/my-bookings', { replace: true });

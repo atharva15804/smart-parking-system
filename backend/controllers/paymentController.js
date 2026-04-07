@@ -139,10 +139,6 @@ exports.verifyPayment = async (req, res) => {
         });
 
         const savedBooking = await newBooking.save();
-
-        // Send the confirmation email asynchronously (DO NOT AWAIT)
-        // This prevents the frontend from hanging if the SMTP connection is slow or fails
-        sendBookingConfirmationEmail(req.user, savedBooking);
         
         res.status(201).json({ message: 'Payment successful, booking created!', booking: savedBooking });
 
