@@ -58,13 +58,8 @@ const sendBookingConfirmationEmail = async (user, booking) => {
             ]
         };
 
-        transporter.sendMail(mailOptions, (error, info) => {
-            if (error) {
-                console.error('Error sending email:', error);
-            } else {
-                console.log('Confirmation email sent:', info.response);
-            }
-        });
+        const info = await transporter.sendMail(mailOptions);
+        console.log('Confirmation email sent successfully! Message ID:', info.messageId);
     } catch (error) {
         console.error('Error generating QR or sending email:', error);
     }
