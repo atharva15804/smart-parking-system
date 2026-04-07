@@ -1,0 +1,125 @@
+/* frontend/src/pages/ProfilePage.css - FINAL FIXED UI SPACING */
+
+.profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.profile-form {
+    background-color: #fff;
+    color: #333;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.profile-form h2 {
+    text-align: center;
+    color: #d9232d;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+/* Message for success or error */
+.profile-message {
+    text-align: center;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    color: #333;
+}
+.profile-message.success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+.profile-message.error {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+
+.form-group {
+    /* FIX 1: Consistent, tighter space below input fields */
+    margin-bottom: 0.9rem; 
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+.form-group input:disabled {
+    background-color: #f4f4f4;
+    cursor: not-allowed;
+}
+
+.profile-button,
+.profile-button-alt {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    /* FIX 2: Consistent margin for primary buttons */
+    margin-top: 1.25rem; 
+}
+
+.profile-button {
+    background-color: #d9232d; /* Red */
+    color: white;
+}
+
+.profile-button-alt {
+    background-color: #555; /* Gray */
+    color: white;
+}
+
+.profile-button:hover {
+    background-color: #b01c24;
+}
+
+.profile-button-alt:hover {
+    background-color: #333;
+}
+
+/* FIX 3: Controls gap between Submit New Password (profile-button) and Cancel (profile-button-alt) */
+.password-section form .profile-button + .profile-button-alt {
+    margin-top: 0.5rem; 
+}
+
+
+/* A simple line to separate the sections */
+.divider {
+    border: 0;
+    height: 1px;
+    background-color: #eee;
+    /* FIX 4: Reduces the margin around the separator line */
+    margin: 1.5rem 0; 
+}
+
+.password-section {
+    text-align: center;
+}

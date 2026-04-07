@@ -1,0 +1,193 @@
+/* frontend/src/pages/AdminDashboard.css */
+
+.admin-container {
+  padding: 2rem;
+  color: #333; 
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
+.admin-container h1 {
+  text-align: center;
+  color: #d9232d;
+  text-transform: uppercase;
+}
+
+/* --- STATS STYLES --- */
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+.stat-card p {
+  margin: 0.5rem 0 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* --- CHARTS SECTION --- */
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chart-card {
+  background-color: #2a2a2e;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.chart-card h3 {
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.chart-wrapper {
+  color: #fff;
+}
+/* --- SECTION STYLES --- */
+.admin-section {
+  background-color: #fff;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto; 
+}
+
+/* --- HEADER & SEARCH STYLES --- */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-section h2 {
+  color: #555;
+  border-bottom: 2px solid #d9232d;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+  margin: 0; 
+}
+
+.search-bar {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  min-width: 250px;
+}
+
+/* Cost Form */
+.cost-form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cost-form label {
+  font-weight: 600;
+}
+
+.cost-form input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.cost-form button {
+  background-color: #d9232d;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Reusable Table for all data */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+  white-space: nowrap; 
+}
+
+.data-table th {
+  background-color: #333;
+  color: white;
+  text-transform: uppercase;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* ACTION BUTTONS */
+.btn-cancel, .btn-delete {
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.btn-cancel {
+  background-color: #f0ad4e; 
+}
+.btn-cancel:hover {
+  background-color: #ec971f;
+}
+
+.btn-delete {
+  background-color: #d9534f; 
+}
+.btn-delete:hover {
+  background-color: #c9302c;
+}
