@@ -426,19 +426,54 @@
 
 /* --- MOBILE RESPONSIVENESS AND TABLET DEVICES --- */
 @media (max-width: 768px) {
+  /* Fix background images disappearing/zooming on mobile iOS/Android */
+  .hero-section, .cta-section {
+    background-attachment: scroll !important;
+    background-position: center top !important;
+  }
+
   .navbar {
     flex-direction: column;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     gap: 1rem;
   }
+  
   .nav-links {
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    width: 100%;
+  }
+
+  .nav-links .cta-nav-btn, .nav-links .logout-link {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 0.5rem;
+  }
+
+  .hero-overlay {
+    padding-top: 120px; /* Push text down so expanded navbar doesn't cover it */
     justify-content: center;
-    gap: 1rem;
+    text-align: center;
   }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
   .hero-content h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
+    line-height: 1.1;
   }
+
   .hero-actions {
     flex-direction: column;
     width: 100%;
