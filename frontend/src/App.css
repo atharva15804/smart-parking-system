@@ -423,3 +423,47 @@
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
+/* --- MOBILE RESPONSIVENESS AND TABLET DEVICES --- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+  .hero-actions .btn-primary, 
+  .hero-actions .btn-secondary {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .cta-overlay h2 {
+    font-size: 2.2rem;
+  }
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  .features-section {
+    padding: 60px 20px;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .large-btn {
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
+}

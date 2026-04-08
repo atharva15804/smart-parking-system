@@ -334,3 +334,45 @@
   z-index: 10;
   animation: pulseGlow 2s infinite;
 }
+
+/* --- MOBILE RESPONSIVENESS AND TABLET DEVICES --- */
+@media (max-width: 768px) {
+  .premium-card {
+    padding: 25px;
+  }
+  .form-header h3 {
+    font-size: 1.8rem;
+  }
+  .slot-grid {
+    grid-template-columns: repeat(5, 1fr) !important;
+  }
+  .slot-details-container {
+    flex-direction: column;
+  }
+  .form-actions {
+    flex-direction: column;
+  }
+  .grid-legend {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .slot-booking-info h4 {
+    font-size: 1.2rem;
+  }
+  .btn-select-slot, .btn-back-outline {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .slot-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+  .premium-card {
+    padding: 15px;
+  }
+  .form-header h3 {
+    font-size: 1.5rem;
+  }  
+}

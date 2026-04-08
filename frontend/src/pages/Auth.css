@@ -110,3 +110,17 @@
   border-color: #f5c6cb;
   color: #721c24;
 }
+
+/* --- MOBILE RESPONSIVENESS AND TABLET DEVICES --- */
+@media (max-width: 600px) {
+  .auth-form {
+    padding: 1.5rem;
+  }
+  .auth-links-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .auth-button {
+    padding: 0.85rem;
+  }
+}

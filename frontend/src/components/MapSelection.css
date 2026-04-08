@@ -280,3 +280,22 @@
 .btn-select-location:hover {
   background: var(--accent-red-hover);
 }
+
+/* --- MOBILE RESPONSIVENESS AND TABLET DEVICES --- */
+@media (max-width: 768px) {
+  .map-header h3 {
+    font-size: 2rem;
+  }
+  .map-view-wrapper {
+    min-height: 300px;
+  }
+  .location-card-image {
+    height: 200px;
+  }
+  .location-card-details {
+    padding: 20px;
+  }
+  .location-card-details h4 {
+    font-size: 1.3rem;
+  }
+}
